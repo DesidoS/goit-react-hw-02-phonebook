@@ -45,6 +45,7 @@ class App extends Component {
   };
 
   render() {
+    const contacts = this.getVisibleContacts();
     return (
       <Container>
         <Section title="Phonebook">
@@ -56,7 +57,7 @@ class App extends Component {
             onFilterChange={this.onFilterChange}
           />
           <ContactList
-            contacts={this.getVisibleContacts()}
+            contacts={contacts}
             onDeleteContact={this.deleteContact}
           />
         </Section>
